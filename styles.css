@@ -1,0 +1,17 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+td {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+td:hover {
+    background-color: darkblue;
+}
