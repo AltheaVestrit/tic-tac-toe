@@ -1,4 +1,4 @@
-const runGame = function () {
+const runGame = (function () {
     const Gameboard = function () {
         const board = [["", "", ""], ["", "", ""], ["", "", ""]];
         const placeMarker = (row, column, marker) => {
@@ -135,6 +135,4 @@ const runGame = function () {
     };
 
     ScreenController();
-};
-
-runGame();
+})();
