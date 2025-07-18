@@ -48,3 +48,42 @@ h1 {
 .cell.end {
     background-color: #a682ff;
 }
+
+form {
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.name-input {
+    color: #102e4a;
+    display: flex;
+    gap: 16px;
+}
+
+form button {
+    background-color: #F6AE2D;
+    color: black;
+    padding: 16px 24px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px -3px #795616;
+}
+
+form button:hover {
+    background-color: white;
+    
+}
+
+form button:active {
+    border: 2px solid #D78F09;
+}

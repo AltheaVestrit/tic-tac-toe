@@ -11,19 +11,16 @@ const runGame = (function () {
         return { placeMarker, getBoard };
     };
 
-    function GameController(
-        playerOneName = "Player One",
-        playerTwoName = "Player Two"
-    ) {
+    function GameController(playerOneName, playerTwoName) {
         const board = Gameboard();
 
         const players = [
             {
-                name: playerOneName,
+                name: playerOneName ? playerOneName : "Player One",
                 marker: "X"
             },
             {
-                name: playerTwoName,
+                name: playerTwoName ? playerTwoName : "Player Two",
                 marker: "O"
             }
         ];
@@ -78,9 +75,13 @@ const runGame = (function () {
     };
 
     function ScreenController() {
-        const game = GameController();
         const display = document.querySelector("#console");
         const boardDiv = document.querySelector(".board");
+        const startBtn = document.querySelector("#start");
+        const playerOne = document.querySelector("#player-one").value;
+        const playerTwo = document.querySelector("#player-two").value;
+
+        const game = GameController(playerOne,playerTwo);
 
         const updateScreen = () => {
             display.textContent = "";
@@ -130,6 +131,11 @@ const runGame = (function () {
         };
 
         boardDiv.addEventListener("click", clickHandlerBoard);
+
+        startBtn.addEventListener("click",(e) => {
+            e.preventDefault();
+            ScreenController();
+        });
 
         updateScreen();
     };
